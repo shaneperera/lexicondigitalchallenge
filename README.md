@@ -13,7 +13,7 @@
 
 * Axios (Promise based HTTP client for the browser and node.js)
 * React-Router-Dom (Used to implement routing)
-* Jest (inbuilt with create-react-app)
+* Jest (Inbuilt with create-react-app)
 
 ### How to use
 
@@ -33,4 +33,4 @@ npm start
 
 ### Design Implementation
 
-Firstly, I decided to break the UI down into a component hierarchy, where each component should ideally be doing one thing. From here, each component was designed using functional components. When I found myself requiring lifecycle or state hooks, I created a helper function which retrieved and presented the relevant information to the parent function. This process was repeated for each component. The styling of each page is done manually using CSS and can be found in the App.css file. 
+Using the wireframe provided by Lexicon as reference, I initially decided to break down the UI into a component hierarchy, where each component had a single responsibility (ideally). From here, each component was designed using functional components. When I found myself requiring lifecycle or state hooks, mainly for API calls, I created another function to fetch the data. The main function would then destructure the response and present the information using JSX. The styling of each page is done manually using CSS and can be found in the App.css file. 
