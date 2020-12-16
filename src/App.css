@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: "montserrat",sans-serif;
+  background-color: white
+}
+
+.movie-page-back {
+  text-decoration: none;
+  background-color: #cfccce;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.photo-link {
+  text-decoration: none;
+  color: black;
+}
+
+.photo-container {
+  list-style-type: none;
+}
+
+.alert-link{
+  text-decoration: none;
+  background: grey;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.pageNotFound-container{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #343434;
+}
+
+.pageNotFound-container h1 {
+  font-size: 100px;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
