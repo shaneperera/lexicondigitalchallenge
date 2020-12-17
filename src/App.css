@@ -1,7 +1,16 @@
+/* Core structure of site */
 body {
-  margin: 0;
   font-family: "montserrat",sans-serif;
   background-color: white
+}
+
+.site-header {
+  background: rgb(51, 68, 71);
+  color: white;
+}
+
+.site-header h1 {
+  margin: 0;
 }
 
 .movie-page-back {
@@ -34,6 +43,7 @@ body {
   display: inline-block;
 }
 
+/* Page not found */
 .pageNotFound-container{
   margin: 0;
   padding: 0;
@@ -51,4 +61,26 @@ body {
   margin: 0;
   font-weight: 700;
   letter-spacing: 10px;
+}
+
+/* Loader */
+.loader {
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Loader - Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

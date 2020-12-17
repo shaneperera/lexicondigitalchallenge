@@ -33,4 +33,8 @@ npm start
 
 ### Design Implementation
 
-Using the wireframe provided by Lexicon as reference, I initially decided to break down the UI into a component hierarchy, where each component had a single responsibility (ideally). From here, each component was designed using functional components. When I found myself requiring lifecycle or state hooks, mainly for API calls, I created another function to fetch the data. The main function would then destructure the response and present the information using JSX. The styling of each page is done manually using CSS and can be found in the App.css file. 
+Using the wireframe provided by Lexicon Digital as reference, I initially decided to break down the UI into a component hierarchy, where each component had a single responsibility (ideally). From here, each component was designed using functional components. When I found myself requiring lifecycle or state hooks, mainly for API calls, I created another function to fetch the data. The main function would then destructure the response and present the information using JSX. The styling of each page is done manually using CSS and can be found in the App.css file. 
+
+### Assumptions
+
+1. Both movie providers stream the same movies

@@ -1,5 +1,5 @@
 /* Poster.jsx
-This file displays a movie poster from a url
+This file creates an image of a movie poster from a url
 Author(s):
     Shane Perera
 Date Created:

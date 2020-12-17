@@ -8,9 +8,8 @@ Date Created:
 
 //Import Statements
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Header from './Header';
-import FetchMovieInfo from './FetchMovieInfo'
+import { Link, useLocation } from 'react-router-dom';
+import FetchMovie from './FetchMovie'
 
 function MoviePage() {
   /*
@@ -20,15 +19,20 @@ function MoviePage() {
       N/A
 
     Returns:
-      Creates page header, back button (return to home page) and adds FetchMovieInfo() component to display movie poster and price comparison between theatres.
+      Creates page header, back button (return to home page) and adds FetchMovie() component to display movie poster and price comparison between theatres.
   */
+
+ const location = useLocation();
+ const {ID_C, ID_F} = location.state;
+
   return(
     <div>
       <div>
-        <Header />
+        <Link to="/" className="movie-page-back">Back</Link>
       </div>
-      <Link to="/" className="movie-page-back">Back</Link>
-      <FetchMovieInfo />
+      <div>
+        <FetchMovie ID_C ={ID_C} ID_F={ID_F} />
+      </div>
     </div>
   );
 }

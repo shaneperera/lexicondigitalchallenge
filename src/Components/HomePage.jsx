@@ -8,8 +8,7 @@ Date Created:
 
 //Import Statements
 import React from 'react';
-import Header from './Header.jsx';
-import FetchMovies from './FetchMovies.jsx'; //Search in components directory
+import FetchMovieList from './FetchMovieList.jsx'; //Search in components directory
 
 function HomePage() {
   /*
@@ -22,12 +21,11 @@ function HomePage() {
       Creates page header, page description and adds FetchMovies() component to display the list of movies now showing at both theatres.
   */
   return(
-    <>
-      <Header />
+    <div>
       <p>Classic Movies At Home</p>
       <p>Now showing</p>
-      <FetchMovies/>
-    </>
+      <FetchMovieList/>
+    </div>
   );
 }
 

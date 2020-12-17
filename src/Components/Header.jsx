@@ -20,11 +20,11 @@ function Header() {
       Page header
   */
   return(
-    <div className="header">
-      <header className="header-text">
+    <header className="site-header">
+      <h1>
         Prince's Theatre
-      </header>
-    </div>
+      </h1>
+    </header>
   );
 }
 
