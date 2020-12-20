@@ -8,7 +8,6 @@ Date Created:
 
 //Import Statements
 import React from 'react';
-import '../App.css';
 import {Link} from 'react-router-dom';
 
 function PageNotFound() {
@@ -26,7 +25,7 @@ function PageNotFound() {
       <h3>Oops! Page not found</h3>
       <h1>404</h1>
       <p>We can't find the page you were looking for.</p>
-      <Link to={"/"} className="alert-link">Go back home</Link>
+      <Link to={"/"} className="error-go-home-link">Go back home</Link>
     </div>
   )
 }

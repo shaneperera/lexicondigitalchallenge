@@ -22,7 +22,10 @@ function Header() {
   return(
     <header className="site-header">
       <h1>
-        Prince's Theatre
+        PRINCE'S THEATRE 
+        <div className="site-header-subtitle">
+          Classic Movies At Home
+        </div>
       </h1>
     </header>
   );

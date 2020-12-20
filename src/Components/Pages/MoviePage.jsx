@@ -9,7 +9,7 @@ Date Created:
 //Import Statements
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import FetchMovie from './FetchMovie'
+import FetchMovie from '../FetchData/FetchMovie.jsx'
 
 function MoviePage() {
   /*
@@ -27,11 +27,11 @@ function MoviePage() {
 
   return(
     <div>
-      <div>
-        <Link to="/" className="movie-page-back">Back</Link>
+      <div className="back-button-container">
+        <Link to="/" className="back-button">Back</Link>
       </div>
-      <div>
-        <FetchMovie ID_C ={ID_C} ID_F={ID_F} />
+      <div className="movie-page-content-container">
+        <FetchMovie ID_C ={ID_C} ID_F={ID_F}/>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
-/* FetchMovie.jsx
-This file handles the retrieval and presentation of a movie object after user selection.
+/* useFetchMovie.jsx
+This file creates a useEffect hook to return information about movie (based on ID) from each movie provider
 Author(s):
     Shane Perera
 Date Created:
@@ -9,8 +9,6 @@ Date Created:
 //Import Statements
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import PosterContainer from './PosterContainer.jsx';
-import Loader from './Loader.jsx';
 import {url, headers} from './FetchMovieList';
 
 function useFetchMovie(ID_C, ID_F){
@@ -48,7 +46,7 @@ function useFetchMovie(ID_C, ID_F){
         setIsLoading(false);
       })
       .catch(() => {
-        setError("Oops! There has been an error fetching the movies. Please refresh the page.");
+        setError("There has been an error fetching the movie. Please refresh the page.");
       })
     };
     fetchData();
@@ -57,44 +55,4 @@ function useFetchMovie(ID_C, ID_F){
   return {cinemaWorldObject, filmWorldObject, isLoading, error}
 }
 
-function FetchMovie(props) {
-  /*
-    Destructures the response from useFetchMovie() to extract the price of movie being shown at cinemaWorld and filmWorld.
-
-    Args:
-      N/A
-
-    Returns:
-      Display poster of film & price comparison between theatres
-  */
-
-  const ID_C = props.ID_C
-  const ID_F = props.ID_F
-  const {cinemaWorldObject, filmWorldObject, isLoading, error} = useFetchMovie(ID_C, ID_F)
-
-  if (error) {
-    return(
-      <p>{error}</p>
-    )
-  }
-
-  if (isLoading) {
-    return(
-      <Loader></Loader>
-    )
-  }
-
-  return(
-    <div>
-      <div>
-        <PosterContainer movie={cinemaWorldObject} />
-      </div>
-      <ul>
-        <li>Cinemaworld: ${cinemaWorldObject.Price}</li>
-        <li>FilmWorld: ${filmWorldObject.Price}</li>
-      </ul>
-    </div>
-  )
-}
-
-export default FetchMovie
+export default useFetchMovie

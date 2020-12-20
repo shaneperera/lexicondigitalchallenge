@@ -8,7 +8,7 @@ Date Created:
 
 //Import Statements
 import React from 'react';
-import FetchMovieList from './FetchMovieList.jsx'; //Search in components directory
+import FetchMovieList from '../FetchData/FetchMovieList.jsx'; //Search in components directory
 
 function HomePage() {
   /*
@@ -22,8 +22,9 @@ function HomePage() {
   */
   return(
     <div>
-      <p>Classic Movies At Home</p>
-      <p>Now showing</p>
+      <div className="now-showing-container">
+        <p className="now-showing-text">NOW SHOWING</p>
+      </div>
       <FetchMovieList/>
     </div>
   );

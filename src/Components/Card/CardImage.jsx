@@ -1,4 +1,4 @@
-/* Poster.jsx
+/* CardImage.jsx
 This file creates an image of a movie poster from a url
 Author(s):
     Shane Perera
@@ -9,7 +9,7 @@ Date Created:
 //Import Statements
 import React from 'react'
 
-function Poster(props) {
+function CardImage(props) {
   /*
     Create a react component that displays a movie poster from a url (props)
 
@@ -20,8 +20,8 @@ function Poster(props) {
       Poster
   */
   return(
-    <img src={props.url} className="photo" alt=""/>
+    <img src={props.url} className="card-image" alt=""/>
   );
 }
 
-export default Poster
+export default CardImage
