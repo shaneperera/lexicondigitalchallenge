@@ -14,6 +14,7 @@
 * Axios (Promise based HTTP client for the browser and node.js)
 * React-Router-Dom (Used to implement routing)
 * Jest (Inbuilt with create-react-app)
+* Enzyme (Testing react component's output)
 
 ### How to use
 
