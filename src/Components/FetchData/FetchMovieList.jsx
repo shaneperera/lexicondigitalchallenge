@@ -12,6 +12,7 @@ import Card from '../Card/Card.jsx';
 import Loader from '../Loader.jsx';
 import { Link } from 'react-router-dom';
 import useFetchMovieList from './useFetchMovieList'
+
 export const url = {
   cinemaWorld: "https://challenge.lexicondigital.com.au/api/cinemaworld",
   filmWorld: "https://challenge.lexicondigital.com.au/api/filmworld"

@@ -53,9 +53,9 @@ body {
   margin-left: 5%;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 130px;
+  width: 150px;
   height: 30px;
-  text-align: center;
+  text-align: left;
 }
 
 .now-showing-text {
