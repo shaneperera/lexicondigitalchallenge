@@ -7,10 +7,10 @@ Date Created:
 */
 
 //Import Statements
-import React from 'react'
+import React from "react";
 
 function CardImage(props) {
-  /*
+	/*
     Create a react component that displays a movie poster from a url (props)
 
     Args:
@@ -19,9 +19,7 @@ function CardImage(props) {
     Returns:
       Poster
   */
-  return(
-    <img src={props.url} className="card-image" alt=""/>
-  );
+	return <img src={props.url} className="card-image" alt="" />;
 }
 
-export default CardImage
+export default CardImage;

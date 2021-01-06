@@ -7,10 +7,10 @@ Date Created:
 */
 
 //Import Statements
-import React from 'react'
+import React from "react";
 
 function Loader() {
-  /*
+	/*
     Create a react component that displays a loading animation
 
     Args:
@@ -19,9 +19,7 @@ function Loader() {
     Returns:
       Loading animation
   */
-  return(
-    <div className="loader"></div>
-  )
+	return <div className="loader"></div>;
 }
 
-export default Loader
+export default Loader;

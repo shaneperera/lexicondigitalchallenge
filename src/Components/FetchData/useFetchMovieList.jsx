@@ -7,12 +7,12 @@ Date Created:
 */
 
 //Import Statements
-import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
-import {url, headers} from './FetchMovieList';
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
+import { url, headers } from "./FetchMovieList";
 
 function useFetchMovieList() {
-  /*
+	/*
     Creates a custom object that returns information about each movie in list
 
     Args:
@@ -23,46 +23,48 @@ function useFetchMovieList() {
       isLoading boolean
       error response
   */
-  const [movieObject, setMovieObject] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
+	const [movieObject, setMovieObject] = useState([]);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState("");
 
-  useEffect(() => {
-    setIsLoading(true)
-    const fetchData = () => {
-      const cinemaWorldURL = `${url.cinemaWorld}/movies`;
-      const filmWorldURL = `${url.filmWorld}/movies`;
+	useEffect(() => {
+		setIsLoading(true);
+		const fetchData = () => {
+			const cinemaWorldURL = `${url.cinemaWorld}/movies`;
+			const filmWorldURL = `${url.filmWorld}/movies`;
 
-      Promise.all([
-        Axios.get(cinemaWorldURL, { headers }),
-        Axios.get(filmWorldURL, { headers })
-      ])
-        .then(([data1, data2]) => {
-          data1 = data1.data.Movies;
-          data2 = data2.data.Movies;
-          const combinedObj = [];
-          data1.forEach((val, index) => {
-            //Create custom array of objects
-            combinedObj.push({
-              key: index,
-              Title: val.Title,
-              cinemaWorldId: val.ID,
-              filmWorldId: data2[index].ID,
-              Poster: val.Poster
-            })
-          });
-          console.log(combinedObj);
-          setMovieObject(combinedObj);
-          setIsLoading(false);
-        })
-        .catch(() => {
-          setError("There has been an error fetching the movies. Please refresh the page.");
-        })
-    };
-    fetchData();
-  }, []);
+			Promise.all([
+				Axios.get(cinemaWorldURL, { headers }),
+				Axios.get(filmWorldURL, { headers }),
+			])
+				.then(([data1, data2]) => {
+					data1 = data1.data.Movies;
+					data2 = data2.data.Movies;
+					const combinedObj = [];
+					data1.forEach((val, index) => {
+						//Create custom array of objects
+						combinedObj.push({
+							key: index,
+							Title: val.Title,
+							cinemaWorldId: val.ID,
+							filmWorldId: data2[index].ID,
+							Poster: val.Poster,
+						});
+					});
+					console.log(combinedObj);
+					setMovieObject(combinedObj);
+					setIsLoading(false);
+				})
+				.catch(() => {
+					setError(
+						"There has been an error fetching the movies. Please refresh the page."
+					);
+				});
+		};
+		fetchData();
+	}, []);
 
-  return { movieObject, isLoading, error }
+	return { movieObject, isLoading, error };
 }
 
-export default useFetchMovieList
+export default useFetchMovieList;

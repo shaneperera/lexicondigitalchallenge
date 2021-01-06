@@ -7,12 +7,12 @@ Date Created:
 */
 
 //Import Statements
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import FetchMovie from '../FetchData/FetchMovie.jsx'
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import FetchMovie from "../FetchData/FetchMovie.jsx";
 
 function MoviePage() {
-  /*
+	/*
     Create react component that displays the movie page
 
     Args:
@@ -22,19 +22,16 @@ function MoviePage() {
       Creates page header, back button (return to home page) and adds FetchMovie() component to display movie poster and price comparison between theatres.
   */
 
- const location = useLocation();
- const {ID_C, ID_F} = location.state;
+	const location = useLocation();
+	const { ID_C, ID_F } = location.state;
 
-  return(
-    <div>
-      <div className="back-button-container">
-        <Link to="/" className="back-button">Back</Link>
-      </div>
-      <div className="movie-page-content-container">
-        <FetchMovie ID_C ={ID_C} ID_F={ID_F}/>
-      </div>
-    </div>
-  );
+	return (
+		<div>
+			<div className="movie-page-content-container">
+				<FetchMovie ID_C={ID_C} ID_F={ID_F} />
+			</div>
+		</div>
+	);
 }
 
-export default MoviePage
+export default MoviePage;

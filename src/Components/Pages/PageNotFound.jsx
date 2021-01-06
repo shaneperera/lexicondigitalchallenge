@@ -7,11 +7,11 @@ Date Created:
 */
 
 //Import Statements
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function PageNotFound() {
-  /*
+	/*
     Create react component that displays a generic 404 page
 
     Args:
@@ -20,14 +20,16 @@ function PageNotFound() {
     Returns:
       Error page with link back to home page
   */
-  return(
-    <div className="pageNotFound-container">
-      <h3>Oops! Page not found</h3>
-      <h1>404</h1>
-      <p>We can't find the page you were looking for.</p>
-      <Link to={"/"} className="error-go-home-link">Go back home</Link>
-    </div>
-  )
+	return (
+		<div className="pageNotFound-container">
+			<h3>Oops! Page not found</h3>
+			<h1>404</h1>
+			<p>We can't find the page you were looking for.</p>
+			<Link to={"/"} className="error-go-home-link">
+				Go back home
+			</Link>
+		</div>
+	);
 }
 
-export default PageNotFound
+export default PageNotFound;

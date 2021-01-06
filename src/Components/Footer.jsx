@@ -7,10 +7,10 @@ Date Created:
 */
 
 //Import Statements
-import React from 'react'
+import React from "react";
 
 function Footer() {
-  /*
+	/*
     Create react component that displays the page footer.
 
     Args:
@@ -19,13 +19,13 @@ function Footer() {
     Returns:
       Page footer
   */
-  return(
-    <div className="site-footer">
-      <p className="site-footer-text">
-        &copy;{new Date().getFullYear()} Designed by Shane Perera
-      </p>
-    </div>
-  )
+	return (
+		<div className="site-footer">
+			<p className="site-footer-text">
+				&copy;{new Date().getFullYear()} Designed by Shane Perera
+			</p>
+		</div>
+	);
 }
 
-export default Footer
+export default Footer;

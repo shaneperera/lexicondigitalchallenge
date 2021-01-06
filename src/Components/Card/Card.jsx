@@ -7,11 +7,11 @@ Date Created:
 */
 
 //Import Statements
-import React from 'react';
-import CardImage from './CardImage.jsx';
+import React from "react";
+import CardImage from "./CardImage.jsx";
 
 function Card(props) {
-  /*
+	/*
     Create a react component that displays the movie poster & title
 
     Args:
@@ -20,14 +20,14 @@ function Card(props) {
     Returns:
       Container including image & title
   */
-  return(
-    <div className="card">
-      <CardImage url={props.movie.Poster} />
-      <div className="card-title-container">
-        <p className="card-title">{props.movie.Title}</p>
-      </div>
-    </div>
-  );
+	return (
+		<div className="card">
+			<CardImage url={props.movie.Poster} />
+			<div className="card-title-container">
+				<p className="card-title">{props.movie.Title}</p>
+			</div>
+		</div>
+	);
 }
 
-export default Card
+export default Card;
